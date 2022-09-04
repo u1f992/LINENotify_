@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DebugType>embedded</DebugType>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>2.0.0</PackageVersion>
   </PropertyGroup>
 
 </Project>

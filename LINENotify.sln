@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINENotify", "LINENotify\LINENotify.csproj", "{B9EAEF87-0437-4710-B977-0CBA24FA057D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifier.Tests", "Notifier.Tests\Notifier.Tests.csproj", "{4A1D9017-B140-4F4D-9D83-AE397682435E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINENotify.Tests", "LINENotify.Tests\LINENotify.Tests.csproj", "{4A1D9017-B140-4F4D-9D83-AE397682435E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

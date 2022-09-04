@@ -3,7 +3,6 @@ using Xunit;
 using System;
 using System.IO;
 using System.Net;
-using LINENotify;
 
 public class UnitTest1
 {
@@ -18,28 +17,32 @@ public class UnitTest1
     [Fact]
     public async void Test1()
     {
-        var ret = await Notifier.SendAsync(GetToken(), "てすてすasync C#から画像なしのメッセージだよ！");
+        var notifier = new LINENotify(GetToken());
+        var ret = await notifier.SendAsync("てすてすasync C#から画像なしのメッセージだよ！");
         Assert.Equal(HttpStatusCode.OK, ret.StatusCode);
     }
 
     [Fact]
     public async void Test2()
     {
-        var ret = await Notifier.SendAsync(GetToken(), "てすてすasync C#から画像付きのメッセージだよ！", Image);
+        var notifier = new LINENotify(GetToken());
+        var ret = await notifier.SendAsync("てすてすasync C#から画像付きのメッセージだよ！", Image);
         Assert.Equal(HttpStatusCode.OK, ret.StatusCode);
     }
 
     [Fact]
     public void Test3()
     {
-        var ret = Notifier.Send(GetToken(), "てすてす C#から画像なしのメッセージだよ！");
+        var notifier = new LINENotify(GetToken());
+        var ret = notifier.Send("てすてす C#から画像なしのメッセージだよ！");
         Assert.Equal(HttpStatusCode.OK, ret.StatusCode);
     }
 
     [Fact]
     public void Test4()
     {
-        var ret = Notifier.Send(GetToken(), "てすてす C#から画像付きのメッセージだよ！", Image);
+        var notifier = new LINENotify(GetToken());
+        var ret = notifier.Send("てすてす C#から画像付きのメッセージだよ！", Image);
         Assert.Equal(HttpStatusCode.OK, ret.StatusCode);
     }
 }
